@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		article > a {
+			color: red;
+		}
+		ul a {
+			color: yellow;
+		}
+		ul ~ ul a {
+			color: green;
+		}
+		ul ~ ul ~ ul a {
+			color: violet;
+		}
+	</style>
+</head>
+<body>
+	<h1>Селекторы прямого потомка</h1>
+	<article>
+		Текст статьи
+		<a href="#">Узнать подробнее</a>
+		<ul>
+			<li><a href="#">Материал 1</a></li>
+			<li><a href="#">Материал 2</a></li>
+			<li><a href="#">Материал 3</a></li>
+		</ul>
+		<p>Параграф</p>
+		<ul>
+			<li><a href="#">Дополнительный Материал 1</a></li>
+			<li><a href="#">Дополнительный Материал 2</a></li>
+			<li><a href="#">Дополнительный Материал 3</a></li>
+		</ul>
+		<p>Параграф</p>
+		<ul>
+			<li><a href="#">Дополнительный Материал 1</a></li>
+			<li><a href="#">Дополнительный Материал 2</a></li>
+			<li><a href="#">Дополнительный Материал 3</a></li>
+		</ul>
+	</article>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body > h1#heading.heading { /*0 1 1 2*/
+			border-color: brown;
+		}
+		body h1#heading.heading { /*0 1 1 2*/
+			border-color: grey;
+		}
+		body h1#heading { /*0 1 0 2*/
+			border-color: violet;
+		}
+		h1#heading { /*0 1 0 1*/
+			border-color: yellow;
+		}
+		#heading { /*0 1 0 0*/
+			border-color: black;
+		}
+		.heading { /*0 0 1 0*/
+			border-color: blue;
+		}
+		h1 { /*0 0 0 1*/
+			border: 10px solid;
+			border-color: red;
+		}
+	</style>
+</head>
+<body>
+	<h1 id="heading" class="heading">Заголовок</h1>
+</body>
+</html>

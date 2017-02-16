@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		a {
+			color: red;
+		}
+		ol a {
+			color: yellow;
+		}
+
+		body ul a {
+			color: blue;
+		}
+		.content h1,
+		.content h2,
+		.content h3 {
+			font-size: 40px;
+		}
+		.content ul a {
+			text-decoration: none;
+		}
+	</style>
+</head>
+<body>
+	<h1>Вложенные селекторы</h1>
+	<article>
+		Текст статьи
+		<a href="#">Узнать подробнее</a>
+		<ul>
+			<li><a href="#">Материал 1</a></li>
+			<li><a href="#">Материал 2</a></li>
+			<li><a href="#">Материал 3</a></li>
+		</ul>
+		<ul>
+			<li><p>
+				<div><span><a href="#">Материал 1</a></span></div>
+			</p></li>
+			<li><a href="#">Материал 2</a></li>
+			<li><a href="#">Материал 3</a></li>
+		</ul>
+		<ol>
+			<li><a href="#">Дополнительный Материал 1</a></li>
+			<li><a href="#">Дополнительный Материал 2</a></li>
+			<li><a href="#">Дополнительный Материал 3</a></li>
+		</ol>
+	</article>
+</body>
+</html>
