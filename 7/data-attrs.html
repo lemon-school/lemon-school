@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		ul {
+			background-color: grey;
+		}
+		li {
+			width: 33.33%;
+			float: left;
+			height: 100px;
+			background-color: #f00;
+		}
+		ul::before {
+			content: attr(data-heading);
+			display: block;
+		}
+		.clearfix::after {
+			content: '';
+			clear: both;
+			display: block;
+		}
+		.parent {
+			background-color: #f00;
+			height: calc(100vh - 40px);
+		}
+		.child {
+			font-size: 30px;
+			background-color: #ccc;
+			color: #fff;
+			width: calc(50% + 20px);
+		}
+	</style>
+</head>
+<body>
+	<div data-name="Myname"></div>
+	<ul class="clearfix" data-heading="выапывапывапывпывап">
+		<li>Item 1</li>
+		<li>Item 2</li>
+		<li>Item 3</li>
+		<li>Item 4</li>
+		<li>Item 5</li>
+	</ul>
+	<div class="parent">
+		
+	</div>
+</body>
+</html>

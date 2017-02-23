@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		
+		a[target] {  /*0 0 1 0*/
+			color: #00f;
+		}
+		a[title*="Big"] { /*0 0 1 0*/
+			color: #f00;
+		}	
+		a { /*0 0 0 1*/
+			color: #0f0;
+		}
+		[id$="id"] { /*0 0 1 0*/
+			background-color: #ccc;
+		}
+	</style>
+</head>
+<body>
+	<a href="#" target="_blank" title="Bigtitle">Blank</a>
+	<a href="#" target="self" title="Small title">Self</a>
+	<a href="#">No target</a>
+	<div id="my-id">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quam veniam earum soluta laborum! Omnis quasi eaque, aut? Facere reiciendis sapiente dolore nihil eum distinctio debitis sed obcaecati minus veritatis!</div>
+</body>
+</html>

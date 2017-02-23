@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		.wrapper {
+			max-width: 1000px;
+			margin-left: auto;
+			margin-right: auto;
+			background: #f3f3f3;
+			box-shadow: 0 20px 20px 0 rgba(0,0,0,.3);
+		}
+		.grid {
+			list-style-type: none;
+			font-size: 0;
+		}
+		.grid::after {
+			content: '';
+			display: block;
+			clear: both;
+		}
+		.grid__item {
+			width: 33.33%;
+			padding-left: 15px;
+			padding-right: 15px;
+			margin-top: 20px;
+			margin-bottom: 20px;
+			height: 200px;
+			/*float: left;*/
+			display: inline-block;
+			vertical-align: bottom;
+		}
+		@media screen and (max-width: 960px) {
+			.grid__item {
+				width: 50%;
+			}
+		}
+		@media screen and (max-width: 640px) {
+			.grid__item {
+				width: 100%;
+			}
+		}
+		.grid__link {
+			background-color: #777;
+			display: block;
+			height: 100%;
+			text-decoration: none;
+			line-height: 200px;
+			font-size: 33px;
+			text-align: center;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<ul class="grid">
+			<li class="grid__item">
+				<a href="#" class="grid__link">
+					<span class="grid__item-name">
+						Product 1
+					</span>
+				</a>
+			</li>
+			<li class="grid__item" style="height: 250px">
+				<a href="#" class="grid__link">
+					<span class="grid__item-name">
+						Product 2
+					</span>
+				</a>
+			</li>
+			<li class="grid__item">
+				<a href="#" class="grid__link">
+					<span class="grid__item-name">
+						Product 3
+					</span>
+				</a>
+			</li>
+			<li class="grid__item">
+				<a href="#" class="grid__link">
+					<span class="grid__item-name">
+						Product 4
+					</span>
+				</a>
+			</li>
+			<li class="grid__item">
+				<a href="#" class="grid__link">
+					<span class="grid__item-name">
+						Product 5
+					</span>
+				</a>
+			</li>
+			<li class="grid__item">
+				<a href="#" class="grid__link">
+					<span class="grid__item-name">
+						Product 6
+					</span>
+				</a>
+			</li>
+			<li class="grid__item">
+				<a href="#" class="grid__link">
+					<span class="grid__item-name">
+						Product 7
+					</span>
+				</a>
+			</li>
+			<li class="grid__item">
+				<a href="#" class="grid__link">
+					<span class="grid__item-name">
+						Product 8
+					</span>
+				</a>
+			</li>
+			<li class="grid__item">
+				<a href="#" class="grid__link">
+					<span class="grid__item-name">
+						Product 9
+					</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>
