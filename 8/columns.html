@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		* {
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+		}
+		.content::after {
+			content: '';
+			display: block;
+			clear: both;
+		}
+		body {
+			max-width: 1000px;
+			margin: 0 auto;
+		}
+		header,
+		footer {
+			min-height: 100px;
+			background-color: #ccc;
+		}
+		main {
+			max-width: 1000px;
+			margin-left: auto;
+			margin-right: auto;
+			padding: 10px;
+			border-right: 100px solid #ff0;
+			border-left: 100px solid #f00;
+		}
+		aside {
+			width: 100px;
+			padding: 10px;
+			margin-bottom: -99999px;
+			padding-bottom: 99999px;
+		}
+		.left {
+			float: left;
+			background: #f00;
+		}
+		.right {
+			float: right;
+			background: #ff0;
+		}
+		.content {
+			overflow: hidden;
+		}
+	</style>
+</head>
+<body>
+	<header>Header</header>
+	<div class="content">
+		<aside class="left">Aside left</aside>
+		<aside class="right">Aside right</aside>
+		<main>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate inventore eaque hic quod reiciendis reprehenderit, earum repellat aut dolorum quam maxime nisi nostrum ea, voluptates illum dolore magnam accusamus, adipisci. Voluptate aliquam minima, tenetur eos optio alias dolorum ratione laborum. Vel, aliquid velit. Dolorum nihil at culpa voluptatum veritatis reiciendis quibusdam, assumenda ea asperiores laboriosam laudantium tempora! Similique soluta, mollitia, quis esse suscipit ab sunt odit modi porro quas labore autem cum perferendis dicta. Pariatur sequi eveniet fugit dolore ipsum alias nostrum ex quod culpa ea suscipit ut unde hic provident eaque, quis ducimus voluptas vel, a sapiente eos, facere doloribus neque sint architecto! Facilis facere dolor repellat non deserunt commodi temporibus eius! Quo exercitationem expedita odit tempore cumque, deserunt rerum assumenda aliquid fuga suscipit esse, maiores atque animi deleniti, amet quasi saepe illo temporibus! Saepe alias ducimus quis nesciunt tenetur est, sit excepturi eveniet odio fuga, aliquid ut impedit animi nostrum. Labore, consequatur nihil dolor. Molestias eum nam inventore sapiente eius in cupiditate, veniam quos, laudantium labore mollitia porro autem? Laudantium illo nihil expedita reprehenderit fuga dicta error, soluta quod ipsum corporis et ratione odit, a modi hic asperiores voluptas, aspernatur quidem quaerat, corrupti explicabo sunt ducimus numquam. Nesciunt.
+		</main>
+	</div>
+	<footer>Footer</footer>
+</body>
+</html>
