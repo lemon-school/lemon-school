@@ -1,0 +1,98 @@
+/*Это style.css*/
+@import 'reset.css';
+.wrapper {
+	background-color: #69d2e7;
+	border-top: 5px solid #fa6900;
+}
+.container {
+	background-color: #f1f1f1;
+}
+.content {
+	max-width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+header {
+	padding-top: 35px;
+}
+.logo {
+	display: inline-block;
+}
+.logo img {
+	display: inline-block;
+	vertical-align: top;
+}
+.logo div {
+	display: inline-block;
+	vertical-align: top;
+	padding-left: 6px;
+}
+.company-name,
+.company-description {
+	display: block;
+	white-space: nowrap;
+}
+.company-name {
+	font-size: 20px;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+.company-description {
+	font-size: 17px;
+}
+.hello {
+	text-align: center;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: 700;
+	padding-top: 94px;
+	padding-bottom: 180px;
+}
+.hello__title {
+	font-size: 84px;
+	line-height: 1em;
+}
+.hello__description {
+	font-size: 31px;
+	line-height: 1em;
+}
+.main {
+	background-color: #fa6900;
+	position: relative;
+	overflow: hidden;
+}
+.content {
+	position: relative;
+}
+.text {
+	color: #fff;
+	padding-top: 100px;
+	padding-bottom: 100px;
+	max-width: 431px;
+}
+.shape {
+	width: 817px;
+	height: 817px;
+	background-color: #fff;
+	border-radius: 50%;
+	position: absolute;
+	z-index: 1;
+	top: 50%;
+	margin-top: -408.5px;
+	right: -300px;
+}
+.shape::after {
+	content: '';
+	display: block;
+	background-color: #fff;
+	height: 100%;
+	width: 99999px;
+	left: 580px;
+	top: 0;
+	position: absolute;
+}
+.shape__image {
+	position: absolute;
+	top: 199px;
+	left: 97px;
+}
