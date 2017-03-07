@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		p:not(.paragraph):not(:first-child) {
+			background-color: #ccc;
+		}
+		.paragraph:not(div) {
+
+		}
+	</style>
+</head>
+<body>
+	<div class="paragraph">Lorem ipsum dolor sit amet.</div>
+	<p>Lorem ipsum dolor sit amet.</p>
+	<p>Lorem ipsum dolor sit amet.</p>
+	<p class="paragraph">Lorem ipsum dolor sit amet.</p>
+	<p class="paragraph">Lorem ipsum dolor sit amet.</p>
+	<p>Lorem ipsum dolor sit amet.</p>
+	<p>Lorem ipsum dolor sit amet.</p>
+	<p>Lorem ipsum dolor sit amet.</p>
+	<p>Lorem ipsum dolor sit amet.</p>
+	<p>Lorem ipsum dolor sit amet.</p>
+	<p>Lorem ipsum dolor sit amet.</p>
+	</div>
+</body>
+</html>

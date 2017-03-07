@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+		}
+		li::before {
+			content: '';
+			display: inline-block;
+			border: 2px solid #f00;
+			border-radius: 50%;
+			background-color: #ccc;
+			width: 15px;
+			height: 15px;
+		}
+		li:hover::before {
+			border-color: #ff0;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>Lorem ipsum dolor sit amet.</li>
+		<li>Lorem ipsum dolor sit amet.</li>
+		<li>Lorem ipsum dolor sit amet.</li>
+	</ul>
+</body>
+</html>

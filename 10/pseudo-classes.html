@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		a:link { color: #f00; }
+
+		/* Посеченная ссылка */
+		a:visited { color: #0f0; }
+
+		/* При наведении мыши */
+		a:hover { color: #f0f; }
+
+		/* Нажатая ссылка (или выделенная в присутствии атрибута tabindex) */
+		a:active { color: #00f; }
+
+		a:focus {
+			background-color: #ccc;
+			outline: none;
+		}
+		p:nth-last-child(2n+3) {
+			color: #f00;
+		}
+		p:first-child,
+		p:last-child {
+			background-color: #ccc;
+		}
+		p {
+			background-color: #00f;
+		}
+		/*div > *:nth-child(3n) {
+			background-color: #ccc;			
+		}*/
+	</style>
+</head>
+<body>
+	<!-- <a href="#">Моя ссылка 1</a>
+		<a href="#">Моя ссылка 2</a>
+		<a href="#">Моя ссылка 3</a>
+		<a href="#">Моя ссылка 4</a>
+		<a href="#">Моя ссылка 5</a> -->
+	<div>
+		<!-- <h5>Lorem ipsum dolor.</h5> -->
+		<p>Lorem ipsum dolor.</p>
+		<p>2! Lorem ipsum dolor.</p>
+		<p>Lorem ipsum dolor.</p>
+		<p>Lorem ipsum dolor.</p>
+		<p>Lorem ipsum dolor.</p>
+		<p>Lorem ipsum dolor.</p>
+		<p>Lorem ipsum dolor.</p>
+		<p>Lorem ipsum dolor.</p>
+		<p>Lorem ipsum dolor.</p>
+		<p>Lorem ipsum dolor.</p>
+	</div>
+</body>
+</html>

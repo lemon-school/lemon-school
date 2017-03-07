@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		ol {
+			/* убираем стандартную нумерацию */
+			list-style-type: none; 
+			/* Идентифицируем счетчик и даем ему имя li. Значение счетчика не указано - по умолчанию оно равно 0 */ 
+			counter-reset: count; 
+		}
+		li:before {
+			/* Определяем элемент, который будет нумероваться — li. Псевдоэлемент before указывает, что содержимое, вставляемое при помощи свойства content, будет располагаться перед пунктами списка. Здесь же устанавливается значение приращения счетчика (по умолчанию равно 1). */
+			counter-increment: count; 
+			/* С помощью свойства content выводится номер пункта списка. counters() означает, что генерируемый текст представляет собой значения всех счетчиков с таким именем. Точка в кавычках добавляет разделяющую точку между цифрами, а точка с пробелом добавляется перед содержимым каждого пункта списка */
+			content: counters(count,".") ". "; 
+		}
+	</style>
+</head>
+<body>
+	<ol>
+		<li>Lorem ipsum dolor sit amet.</li>
+		<li>Lorem ipsum dolor sit amet.</li>
+		<li>Lorem ipsum dolor sit amet.
+			<ol>
+				<li>Lorem ipsum dolor sit amet.</li>
+				<li>Lorem ipsum dolor sit amet.</li>
+				<li>Lorem ipsum dolor sit amet.
+					<ol>
+						<li>Lorem ipsum dolor sit amet.</li>
+						<li>Lorem ipsum dolor sit amet.</li>
+						<li>Lorem ipsum dolor sit amet.
+							<ol>
+								<li>Lorem ipsum dolor sit amet.</li>
+								<li>Lorem ipsum dolor sit amet.</li>
+								<li>Lorem ipsum dolor sit amet.</li>
+							</ol>	
+						</li>
+					</ol>	
+				</li>
+			</ol>	
+		</li>
+		<li>Lorem ipsum dolor sit amet.</li>
+		<li>Lorem ipsum dolor sit amet.</li>
+		<li>Lorem ipsum dolor sit amet.</li>
+	</ol>	
+</body>
+</html>
