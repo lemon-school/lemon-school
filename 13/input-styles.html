@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		input[type="text"] {
+			margin-bottom: 10px;
+			display: inline-block;
+		}
+		input[type="text"]:focus {
+			box-shadow: 0 0 10px 0 rgba(0,0,0,.7);
+			border: 1px solid #000;
+			outline: none;
+		}
+		input[type="radio"] {
+			display: none;
+		}
+		input[type="radio"] + label {
+			display: inline-block;
+			width: 10px;
+			height: 10px;
+			background-color: #000;
+			border-radius: 50%;
+			box-sizing: border-box;
+		}
+		input[type="radio"]:checked + label {
+			border: 3px solid #000;
+			background-color: #fff;
+		}
+		a:hover + span{
+			color: #f00;
+		}
+		[type="checkbox"] {
+			display: none;
+		}
+		input[type="checkbox"] + span {
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			border: 3px solid #000;
+			position: relative;
+		}
+		input[type="checkbox"]:checked + span::before {
+			position: absolute;
+			content: '';
+	    width: 12px;
+    	height: 6px;
+			border-left: 2px solid;
+			border-bottom: 2px solid;
+			transform: rotate(-45deg);
+			top: 5px;
+			left: 3px;
+		}
+		input[type="checkbox"]:checked + span::after {
+			/*position: absolute;
+			content: '';
+			height: 4px;
+			width: 100%;
+			top: 8px;
+			background-color: #000;
+			left: 0;*/
+		}
+	</style>
+</head>
+<body>
+	<input type="text">
+	<input type="text">
+	<input type="text">
+	<input type="text">
+	<input type="text">
+	<div>
+		<input type="radio" name="radio" id="radio1">
+		<label for="radio1"></label>
+		<input type="radio" name="radio" id="radio2">
+		<label for="radio2"></label>
+		<input type="radio" name="radio" id="radio3">
+		<label for="radio3"></label>
+	</div>
+	<a href="#">hover me</a>
+	<span>hover touches me</span>
+	<label>
+		<input type="checkbox">
+		<span></span>
+	</label>
+</body>
+</html>
