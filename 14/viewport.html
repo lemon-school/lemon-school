@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Document</title>
+  <style>
+    * {
+  box-sizing: border-box;
+}
+
+.item {
+  height: auto;
+  width: 25%;
+  float: left;
+  padding: 20px;
+  text-align: center;
+}
+@media all and (max-width: 1024px) {
+  .item {
+    width: 50%;
+  }
+}
+@media all and (max-width: 500px) {
+  .item {
+    width: 100%;
+  }
+}
+.item__image {
+  background-color: #ccc;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 10px auto;
+}
+
+  </style>
+</head>
+<body>
+   <div class="wrapper"></div>
+   <div class="item">
+     <div class="item__image"></div>
+     <span>Преимущество 1</span>
+   </div>
+   <div class="item">
+     <div class="item__image"></div>
+     <span>Преимущество 2</span>
+   </div>
+   <div class="item">
+     <div class="item__image"></div>
+     <span>Преимущество 3</span>
+   </div>
+   <div class="item">
+     <div class="item__image"></div>
+     <span>Преимущество 4</span>
+   </div>
+</body>
+</html>

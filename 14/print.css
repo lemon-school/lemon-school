@@ -1,0 +1,14 @@
+@media print {
+	* {
+		color: #000;
+	}
+	body {
+		background-color: #fff;
+	}
+	nav {
+		display: none;
+	}
+	p {
+		font-size: 16px;
+	}
+}
