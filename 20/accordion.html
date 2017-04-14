@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="libs/scroll.css">
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: sans-serif;
+		}
+		.accordion {
+			width: 300px;
+			margin: 100px auto;
+		}
+		.accordion__item {
+
+		}
+		.accordion__link {
+			background-color: #ccc;
+			padding: 10px;
+		}
+		.accordion__content {
+			overflow-y: auto;
+			overflow-x: hidden;
+			height: 150px;
+			display: none;
+		}
+		#accordion .mCSB_dragger_bar {
+			background-color: #f00;
+		}
+	</style>
+</head>
+<body>
+	<div class="accordion" id="accordion">
+		<div class="accordion__item">
+			<div class="accordion__link">Accordion item 1</div>
+			<div class="accordion__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe doloribus laudantium alias, omnis distinctio sint ut cumque. Recusandae molestias explicabo reiciendis atque dolorem nulla quas neque tenetur quod, velit dolorum quis aperiam nemo culpa corrupti rerum accusamus placeat, quo fugiat deleniti error minima reprehenderit autem odit maxime? Ex fugiat quam beatae dolore? In soluta non id, ullam, doloribus corporis, error at odio nulla praesentium debitis molestiae ut. Quidem, assumenda earum nam obcaecati deleniti, perspiciatis porro suscipit ea ipsa explicabo sint molestias saepe sunt officiis in, quae necessitatibus veritatis voluptates delectus debitis doloremque repellendus, excepturi dolorum facere. Assumenda laboriosam asperiores incidunt consequuntur excepturi autem, aut eius quod iure! Aspernatur dolorum non accusamus pariatur, itaque vel. Earum laboriosam necessitatibus, magnam sint, aspernatur enim nesciunt illo quae fuga ad non consequatur neque, facilis ipsam consectetur ex culpa corrupti! Ea necessitatibus aperiam perferendis nam, iusto adipisci unde, totam doloribus, molestiae inventore commodi! Esse quis, provident vitae reiciendis quas eos maxime ipsam repellendus. Ab sit inventore culpa numquam saepe perferendis excepturi nisi omnis quos repellat illo at ducimus, blanditiis quia rerum fugiat, officiis aliquid ipsum nulla rem? Quam veniam quis earum. Ipsum, libero velit, temporibus, labore accusamus eius dolore nisi est ab numquam, laudantium expedita?</div>
+		</div>
+		<div class="accordion__item">
+			<div class="accordion__link">Accordion item 2</div>
+			<div class="accordion__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti ipsum, quaerat autem numquam tenetur? Deserunt aperiam alias laborum laudantium a expedita ad sed est officia neque atque fugit laboriosam animi aut beatae quis, pariatur voluptas velit molestias. Tempore cumque ut vel autem exercitationem ex, iure ducimus maiores at illum vero reiciendis quia dolorum quam. Pariatur atque voluptate a nesciunt dolor facilis sed, culpa inventore est officiis hic dolorem distinctio dicta, nemo aliquid aut doloremque. Mollitia, tempora. Minus maxime ipsam praesentium, pariatur id minima suscipit qui eum, commodi voluptatem nesciunt deserunt nisi quos molestiae, accusamus. Incidunt eos autem obcaecati. Animi et esse repellat repudiandae officiis sed pariatur suscipit quidem nisi, est tempora enim quisquam iusto expedita optio voluptatem libero ut distinctio mollitia, quo autem quae, a, sequi molestias. Consequatur labore nihil harum ipsam, fugit sapiente sequi et illum iusto ducimus! Corrupti, enim. Incidunt deserunt, a provident error labore hic. Ullam non, quasi sint praesentium earum iure deleniti debitis, dicta sequi, recusandae exercitationem. Porro iure maiores adipisci, hic nulla corporis ab velit dolore perspiciatis, animi quos? Quae illum officia provident voluptatibus rem fugit officiis facilis, neque quis, asperiores autem at rerum reiciendis sint possimus ipsam minima. Quos quis, cum aspernatur possimus alias?</div>
+		</div>
+		<div class="accordion__item">
+			<div class="accordion__link">Accordion item 3</div>
+			<div class="accordion__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis natus maiores, totam nobis unde expedita odit obcaecati iste non cumque cupiditate optio porro reiciendis consequatur est quae harum odio deserunt tempore consectetur saepe iusto aperiam atque fuga. Harum nesciunt dicta nulla nam laboriosam soluta enim aliquid impedit similique, voluptatem eveniet in, consequatur, accusantium iste dolorum porro ex doloribus assumenda! Id ex mollitia harum, quis sequi! Ratione, quisquam, autem eveniet quibusdam in doloribus, amet ea incidunt culpa mollitia voluptates tenetur accusantium enim eius reprehenderit aliquid. Itaque dicta nesciunt sed tenetur asperiores assumenda necessitatibus minus corporis totam ullam nam, ipsa magnam nemo cupiditate quos porro atque impedit quibusdam vel, libero tempora. Impedit, quis, libero? Earum commodi, itaque sequi quaerat quas facere natus assumenda sapiente fuga ut deserunt nemo voluptatibus dolore unde cupiditate similique odit iusto praesentium maxime, corrupti animi. Ratione repellendus illum mollitia aperiam delectus doloremque eligendi possimus quasi, facere earum nesciunt ab omnis cumque, alias iure animi vero soluta accusantium optio pariatur odit non! In esse, aliquid. Adipisci quae ipsa laboriosam eius modi magni quibusdam facere fugiat perferendis eos, error voluptate dolores! Dolore ab cum repudiandae tempore modi illum. In perferendis error, pariatur blanditiis deserunt quas nam, veritatis illo obcaecati molestias.</div>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="libs/scroll.js"></script>
+	<script>
+		$('.accordion__content').mCustomScrollbar();
+		$('.accordion__link').on('click', function() {
+			if ($(this).hasClass('active')) {
+				return
+			}
+			$('.accordion__link.active').next().slideUp();
+			$('.accordion__link.active').removeClass('active');
+			$(this).next().slideDown();
+			$(this).addClass('active');
+		});
+	</script>
+</body>
+</html>

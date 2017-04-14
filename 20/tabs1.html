@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		ul > li {
+  list-style-type: none;
+}
+.tabs-nav ul > li {
+  display: inline;
+  color: rgba(255, 0, 0, 0.7);
+  cursor: pointer;
+}
+.tabs-nav ul .active {
+  background-color: #f0f;
+}
+.tabs-content ul > li {
+  display: none;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+.tabs-content ul > li.active {
+  background-color: #f00;
+  display: block;
+}
+
+	</style>
+</head>
+<body>
+<div id="tabs">
+		<div class="tabs-nav">
+			<ul>
+				<li>Tab 1</li>
+				<li>Tab 2</li>
+				<li>Tab 3</li>
+				<li>Tab 4</li>
+				<li>Tab 5</li>
+			</ul>
+		</div>
+		<div class="tabs-content">
+			<ul>
+				<li>Tab 1 content</li>
+				<li>Tab 2 content</li>
+				<li>Tab 3 content</li>
+				<li>Tab 4 content</li>
+				<li>Tab 5 content</li>
+			</ul>
+		</div>
+	</div>
+	<div id="tabs1">
+		<div class="tabs-nav">
+			<ul>
+				<li>Tab 1</li>
+				<li>Tab 2</li>
+				<li>Tab 3</li>
+				<li>Tab 4</li>
+				<li>Tab 5</li>
+			</ul>
+		</div>
+		<div class="tabs-content">
+			<ul>
+				<li>Tab 1 content</li>
+				<li>Tab 2 content</li>
+				<li>Tab 3 content</li>
+				<li>Tab 4 content</li>
+				<li>Tab 5 content</li>
+			</ul>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script>
+		(function($){
+	$.fn.tabs = function(){
+		var nav = $(this).find('.tabs-nav'),
+			navLis = $(this).find('.tabs-nav li'),
+			content = $(this).find('.tabs-content'),
+			contentLis = $(this).find('.tabs-content li');
+		$(navLis[0]).addClass('active');
+		$(contentLis[0]).addClass('active');
+		$.each(navLis, function(i){
+			$(this).addClass('tab-nav-'+i);
+		});
+		$.each(contentLis, function(i){
+			$(this).addClass('tab-content-'+i);
+		});
+		navLis.on('click', function(){
+			var data = $(this).attr('class');
+			var index = data.lastIndexOf('-');
+			data = parseInt(data.substr(index+1));
+      console.log(data);
+			var contentLi = $(contentLis[data]);
+			navLis.removeClass('active');
+			contentLis.removeClass('active');
+			contentLi.addClass('active');
+			$(this).addClass('active');
+		});
+	}
+})(jQuery);
+// это ваш селектор с инициализацией табов
+$('#tabs').tabs();
+$('#tabs1').tabs();
+	</script>
+</body>
+</html>

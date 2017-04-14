@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tabs</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: sans-serif;
+		}
+		.tabs-nav {
+			font-size: 0;
+		}
+		.tabs-nav__item {
+			display: inline-block;
+			font-size: 20px;
+			padding: 20px;
+			border: 1px solid #000;
+			border-right-width: 0;
+		}
+		.tabs-nav__item.active {
+			border-bottom-color: #fff;
+		}
+		.tabs-nav__item:last-child {
+			border-right-width: 1px;
+		}
+		.tabs-content {
+			list-style-type: none;
+			position: relative;
+		}
+		.tabs-content__item {
+			font-size: 20px;
+			padding: 20px;
+			opacity: 0;
+			pointer-events: none;
+			transition: opacity .25s ease-out;
+			position: absolute;
+			width: 100%;
+		}
+		.tabs-content__item.active {
+			opacity: 1;
+		}
+	</style>
+</head>
+<body>
+	<div class="tabs">
+		<ul class="tabs-nav">
+			<li class="tabs-nav__item active" data-tab="0">Tabs nav 1</li>
+			<li class="tabs-nav__item" data-tab="1">Tabs nav 2</li>
+			<li class="tabs-nav__item" data-tab="2">Tabs nav 3</li>
+			<li class="tabs-nav__item" data-tab="3">Tabs nav 4</li>
+			<li class="tabs-nav__item" data-tab="4">Tabs nav 5</li>
+		</ul>
+		<ul class="tabs-content">
+			<li class="tabs-content__item active" data-tab="0">Tabs content 1</li>
+			<li class="tabs-content__item" data-tab="1">Tabs content 2</li>
+			<li class="tabs-content__item" data-tab="2">Tabs content 3</li>
+			<li class="tabs-content__item" data-tab="3">Tabs content 4</li>
+			<li class="tabs-content__item" data-tab="4">Tabs content 5</li>
+		</ul>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script>
+		$('.tabs-nav__item').on('click', function(){
+			$('.tabs-nav__item').removeClass('active');
+			// $(this).addClass('active');
+			$('.tabs-content__item').removeClass('active');
+			var tabIndex = $(this).attr('data-tab');
+			$('.tabs [data-tab="' + tabIndex + '"]')
+				.addClass('active');
+		});
+	</script>
+</body>
+</html>
